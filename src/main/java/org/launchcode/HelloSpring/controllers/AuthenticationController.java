@@ -118,9 +118,9 @@ public class AuthenticationController {
         }
 
         setUserInSession(request.getSession(), theUser);
-        model.addAttribute("user", theUser);
+        model.addAttribute("user", theUser.username);
 
-        return "welcome";
+        return "/welcome";
     }
 
     @GetMapping("/logout")
